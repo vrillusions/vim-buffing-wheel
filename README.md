@@ -1,8 +1,8 @@
 # VIM Buffing Wheel
 
-`<C-n>` and `<C-p>` change buffers, like `:bnext` and `:bprevious`.
+`H` and `L` change buffers, like `:bprevious` and `:bnext`.
 
-`<C-u>` deletes the current buffer, like `:bdelete`
+`X` deletes the current buffer, like `:bdelete`
 
 After each of the above, the list of buffers is displayed at the bottom of the
 screen.  The current buffer is surrounded with `[]`.  Modified buffers are
