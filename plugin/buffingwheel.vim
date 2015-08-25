@@ -1,9 +1,9 @@
-command! BuffingWheelNext     call buffingwheel#cmd('bnext')
-command! BuffingWheelPrevious call buffingwheel#cmd('bprevious')
-command! BuffingWheelDelete   call buffingwheel#cmd('bdelete')
+com! BufNext cal buffingwheel#cmd('bn')
+com! BufPrev cal buffingwheel#cmd('bp')
+com! BufDel  cal buffingwheel#cmd('bd')
 
 if !exists('g:BuffingWheelSkipMappings') || !g:BuffingWheelSkipMappings
-  noremap <silent> L :<C-u>BuffingWheelNext<CR>
-  noremap <silent> H :<C-u>BuffingWheelPrevious<CR>
-  noremap <silent> X :<C-u>BuffingWheelDelete<CR>
-endif
+  no<silent> <space> :<c-u>BufNext<cr>
+  no<silent> <bs>    :<c-u>BufPrev<cr>
+  no<silent> X       :<c-u>BufDel<cr>
+en

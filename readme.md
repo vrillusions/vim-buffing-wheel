@@ -1,15 +1,13 @@
-# VIM Buffing Wheel
+`<space>` and `<backspace>` switch buffers, like `:bprevious` and `:bnext`.
 
-`H` and `L` change buffers, like `:bprevious` and `:bnext`.
+`X` deletes the current buffer, like `:bdelete`.
 
-`X` deletes the current buffer, like `:bdelete`
-
-After each of the above, the list of buffers is displayed at the bottom of the
-screen.  The current buffer is surrounded with `[]`.  Modified buffers are
-appended a `+`.
+After each of the above, a single-line list of buffers is displayed at the bottom of the screen.  The current buffer is
+surrounded with `[]`.  Modified buffers are appended a `+`.  If the list doesn't fit on the screen, the extra parts are
+removed and "..." is displayed at the sides.
 
 ![Screenshot](https://raw.github.com/ngn/vim-buffing-wheel/master/screenshot.png)
 
-Note that no splits are created and the action is performed before showing the
-list of buffers.  I find this more usable than the approach taken by the
-popular BufExplorer and MiniBufExplorer plugins.
+The line is printed using `:echo` (no `:split`-s are used) and will disappear on the next keystroke.
+
+See also the BufExplorer and MiniBufExplorer plugins.
